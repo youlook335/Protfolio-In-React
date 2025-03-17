@@ -12,6 +12,7 @@ function Navbar() {
         { name: "About", id: "about" },
         { name: "Skills", id: "skills" },
         { name: "Projects", id: "projects" },
+        { name: "Experience", id: "experience" },
         { name: "Contact", id: "contact" }
     ];
 
@@ -41,15 +42,14 @@ function Navbar() {
                     {menuItems.map((item) => (
                         <li key={item.id} className="relative group cursor-pointer">
                             <Link
-                                to={item.id} 
-                                smooth={true} 
-                                duration={600} 
+                                to={item.id}
+                                smooth={true}
+                                duration={600}
                                 offset={-70}
                                 onClick={() => setActiveTab(item.id)}
                                 onSetActive={() => setActiveTab(item.id)} // 👈 Scroll کے دوران بھی Active ہوگا
-                                className={`cursor-pointer transition-all duration-300 ${
-                                    activeTab === item.id ? "text-cyan-400" : "hover:text-cyan-400"
-                                }`}
+                                className={`cursor-pointer transition-all duration-300 ${activeTab === item.id ? "text-cyan-400" : "hover:text-cyan-400"
+                                    }`}
                             >
                                 {item.name}
                             </Link>
@@ -90,9 +90,8 @@ function Navbar() {
                                         setIsOpen(false); // Close menu on selection
                                     }}
                                     onSetActive={() => setActiveTab(item.id)} // 👈 Scroll کے دوران بھی Active ہوگا
-                                    className={`block transition-all duration-300 ${
-                                        activeTab === item.id ? "text-cyan-400" : "hover:text-cyan-400"
-                                    }`}
+                                    className={`block transition-all duration-300 ${activeTab === item.id ? "text-cyan-400" : "hover:text-cyan-400"
+                                        }`}
                                 >
                                     {item.name}
                                 </Link>
@@ -117,11 +116,3 @@ function Navbar() {
 
 export default Navbar;
 
-
-
-
-
-// https://dev-muhammad.vercel.app/#contact
-// Refrence: https://dev-muhammad.vercel.app/#contact
-
-<img width={120} src="https://miti-1st-project.netlify.app/T%20&%20S%20Logo.png" alt="Logo" />
