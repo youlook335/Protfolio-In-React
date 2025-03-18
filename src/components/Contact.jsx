@@ -27,7 +27,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-gray-900 text-white py-10 px-5 md:px-20 flex flex-col md:flex-row justify-between items-center min-h-screen">
+    <div className="bg-[#0a0f1a] text-white py-20 px-5 md:px-20 flex flex-col md:flex-row justify-between items-center min-h-screen">
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-900 to-purple-900 opacity-20 blur-3xl"></div>
       {/* Left Section */}
       <div className="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
         <h2 className="text-3xl font-bold text-white" data-aos="fade-down">Contact <span className="text-blue-500">Me</span></h2>
@@ -47,7 +48,7 @@ const Contact = () => {
       </div>
 
       {/* Right Section - Form */}
-      <form onSubmit={handleSubmit} className="md:w-1/2 bg-gray-800 p-8 rounded-lg shadow-xl w-full max-w-lg" data-aos="fade-left">
+      <form onSubmit={handleSubmit} className="md:w-1/2 bg-gray-800 p-8 rounded-lg shadow-xl w-full max-w-lg">
         <input type="text" name="name" placeholder="Your Name" onChange={handleChange} className="w-full p-3 mb-4 bg-gray-700 text-white rounded border border-gray-600 focus:border-blue-500 focus:outline-none" data-aos="fade-up" />
         <input type="email" name="email" placeholder="Your Email" onChange={handleChange} className="w-full p-3 mb-4 bg-gray-700 text-white rounded border border-gray-600 focus:border-blue-500 focus:outline-none" data-aos="fade-up" />
         <input type="text" name="subject" placeholder="Your Subject" onChange={handleChange} className="w-full p-3 mb-4 bg-gray-700 text-white rounded border border-gray-600 focus:border-blue-500 focus:outline-none" data-aos="fade-up" />

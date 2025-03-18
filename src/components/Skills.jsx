@@ -4,20 +4,23 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const frontendSkills = [
-    { name: "HTML", percent: 90, icon: "https://cdn.worldvectorlogo.com/logos/html-1.svg" },
-    { name: "CSS", percent: 80, icon: "https://cdn.worldvectorlogo.com/logos/css-3.svg" },
-    { name: "JavaScript", percent: 85, icon: "https://cdn.worldvectorlogo.com/logos/javascript-1.svg" },
-    { name: "Git", percent: 85, icon: "https://cdn.worldvectorlogo.com/logos/git-icon.svg" },
-    { name: "React.js", percent: 70, icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
-    { name: "Bootstrap", percent: 90, icon: "https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg" },
-    { name: "TypeScript", percent: 90, icon: "https://cdn.worldvectorlogo.com/logos/typescript.svg" },
+    { name: "HTML", percent: 70, icon: "https://cdn.worldvectorlogo.com/logos/html-1.svg" },
+    { name: "CSS", percent: 60, icon: "https://cdn.worldvectorlogo.com/logos/css-3.svg" },
+    { name: "JavaScript", percent: 55, icon: "https://cdn.worldvectorlogo.com/logos/javascript-1.svg" },
+    { name: "Git", percent: 40, icon: "https://cdn.worldvectorlogo.com/logos/git-icon.svg" },
+    { name: "React.js", percent: 60, icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
+    { name: "Bootstrap", percent: 70, icon: "https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg" },
+    { name: "TypeScript", percent:  30, icon: "https://cdn.worldvectorlogo.com/logos/typescript.svg" },
+    { name: "Tailwind CSS", percent:  60, icon: "https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" },
+    { name: "PHP", percent:  40, icon: "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" },
+  
 ];
 
 const softSkills = [
-    { name: "Problem-Solving", percent: 90 },
+    { name: "Problem-Solving", percent: 70 },
     { name: "Communication", percent: 75 },
-    { name: "Teamwork", percent: 80 },
-    { name: "Time Management", percent: 70 },
+    { name: "Teamwork", percent: 60 },
+    { name: "Time Management", percent: 50 },
 ];
 
 const Skills = () => {
@@ -28,11 +31,11 @@ const Skills = () => {
     }, []);
 
     return (
-        <div ref={ref} className="min-h-screen bg-[#0a0f1a] text-white flex flex-col items-center py-10">
+        <div ref={ref} className="min-h-screen bg-[#0a0f1a] text-white flex flex-col items-center py-20">
+
             <h1 data-aos="fade-down" className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 mb-10">
                 My Skills
             </h1>
-
             <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 px-5">
                 {/* Frontend Skills */}
                 <motion.div

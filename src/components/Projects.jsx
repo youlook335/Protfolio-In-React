@@ -2,7 +2,7 @@ import React from "react";
 
 const Projects = () => {
     return (
-        <div className="project-container   flex flex-col items-center justify-center px-8 bg-[#0a0f1a] relative">
+        <div className="project-container flex flex-col items-center justify-center px-8 bg-[#0a0f1a] relative">
 
             {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-900 to-purple-900 opacity-20 blur-3xl"></div> */}
             <h1 className="mb-5 mt-5 text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 leading-tight">
@@ -11,7 +11,7 @@ const Projects = () => {
 
             {/* E-Commerce Platform */}
 
-            {/* <div className="flex flex-col md:flex-row items-center text-center mt-4 md:text-left gap-10 mb-10"> */}
+            <div className="flex flex-col md:flex-row items-center text-center mt-4 md:text-left gap-10 mb-10">
                 <img
                     src="AI.jpg"
                     alt="E-Commerce Platform"
@@ -26,7 +26,7 @@ const Projects = () => {
                         browsing products and managing the shopping cart.
                     </p>
                 </div>
-            {/* </div> */}
+            </div>
 
             {/* Chat Application */}
             <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-10">
@@ -40,7 +40,7 @@ const Projects = () => {
                     </p>
                 </div>
                 <img
-                    src="https://dev-muhammad.vercel.app/static/media/skymart.c52e55a85ec48b8d2704.JPG"
+                    src="AI.jpg"
                     alt="Chat Application"
                     className="rounded-lg shadow-lg w-full md:w-1/2"
                 />

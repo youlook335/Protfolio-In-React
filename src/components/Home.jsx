@@ -69,7 +69,7 @@ function Home() {
 
             {/* Right Side - Profile Image */}
             <div className="md:w-1/2 flex justify-center mt-10 md:mt-0 relative z-10" data-aos="fade-left">
-                <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-2xl shadow-cyan-500 border-4 border-transparent hover:border-pink-500 transition-all duration-300">
+                <div className="mb-5 relative w-80 h-80 rounded-full overflow-hidden shadow-2xl shadow-cyan-500 border-4 border-transparent hover:border-pink-500 transition-all duration-300">
                     <img
                         src="https://bootpress-ai.vercel.app/Boy%20(6)%20fit%20img%20in%20nonw.jpg"
                         alt="Profile"
