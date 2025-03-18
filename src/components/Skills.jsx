@@ -10,10 +10,10 @@ const frontendSkills = [
     { name: "Git", percent: 40, icon: "https://cdn.worldvectorlogo.com/logos/git-icon.svg" },
     { name: "React.js", percent: 60, icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
     { name: "Bootstrap", percent: 70, icon: "https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg" },
-    { name: "TypeScript", percent:  30, icon: "https://cdn.worldvectorlogo.com/logos/typescript.svg" },
-    { name: "Tailwind CSS", percent:  60, icon: "https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" },
-    { name: "PHP", percent:  40, icon: "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" },
-  
+    { name: "TypeScript", percent: 20, icon: "https://cdn.worldvectorlogo.com/logos/typescript.svg" },
+    { name: "Tailwind CSS", percent: 50, icon: "https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" },
+    { name: "PHP", percent: 30, icon: "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" },
+
 ];
 
 const softSkills = [
@@ -32,8 +32,8 @@ const Skills = () => {
 
     return (
         <div ref={ref} className="min-h-screen bg-[#0a0f1a] text-white flex flex-col items-center py-20">
+            <h1 className="mb-10 mt-10 p-2 text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">
 
-            <h1 data-aos="fade-down" className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 mb-10">
                 My Skills
             </h1>
             <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 px-5">

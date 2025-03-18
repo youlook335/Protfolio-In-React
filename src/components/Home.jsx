@@ -62,7 +62,7 @@ function Home() {
                         className="relative px-6 py-3 font-semibold text-white border-2 border-teal-400 rounded-lg shadow-md transition-all duration-300 hover:bg-teal-400 hover:text-black"
                         data-aos="zoom-in"
                     >
-                        Contact Me
+                        <a href="#contact">Contact Me</a>
                     </button>
                 </div>
             </div>
@@ -71,7 +71,7 @@ function Home() {
             <div className="md:w-1/2 flex justify-center mt-10 md:mt-0 relative z-10" data-aos="fade-left">
                 <div className="mb-5 relative w-80 h-80 rounded-full overflow-hidden shadow-2xl shadow-cyan-500 border-4 border-transparent hover:border-pink-500 transition-all duration-300">
                     <img
-                        src="https://bootpress-ai.vercel.app/Boy%20(6)%20fit%20img%20in%20nonw.jpg"
+                        src="https://avatars.githubusercontent.com/u/197722550?v=4"
                         alt="Profile"
                         className="w-full h-full "
                     />
