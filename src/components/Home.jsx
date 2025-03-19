@@ -26,8 +26,7 @@ function Home() {
             {/* Left Side - Text Content */}
             <div className="md:w-1/2 text-center z-10" data-aos="fade-right">
                 <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 leading-tight">
-                    Hi, I'm
-                    <TypeAnimation
+                    Hi, I'm <TypeAnimation
                         sequence={["Tanveer", 1200, "", 500]}
                         wrapper="span"
                         speed={50}
