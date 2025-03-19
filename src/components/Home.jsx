@@ -28,7 +28,7 @@ function Home() {
                 <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 leading-tight">
                     Hi, I'm
                     <TypeAnimation
-                        sequence={["Tanveer ", 1200, "", 500]}
+                        sequence={["Tanveer", 1200, "", 500]}
                         wrapper="span"
                         speed={50}
                         className="text-yellow-400 font-bold"
