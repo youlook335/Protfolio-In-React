@@ -18,8 +18,8 @@ function Home() {
     };
 
     return (
-        <div className="home-container min-h-screen flex flex-col md:flex-row items-center justify-center px-8 bg-[#0a0f1a] relative">
-            
+        <div className="home-container p-40 flex flex-col md:flex-row items-center justify-center px-8 bg-[#0a0f1a] relative">
+
             {/* Background Glow Effect */}
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-900 to-purple-900 opacity-20 blur-3xl"></div>
 
@@ -28,22 +28,14 @@ function Home() {
                 <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 leading-tight">
                     Hi, I'm
                     <TypeAnimation
-                        sequence={[" Tanveer", 1200, "", 500]}
+                        sequence={["Tanveer ", 1200, "", 500]}
                         wrapper="span"
                         speed={50}
                         className="text-yellow-400 font-bold"
                         repeat={Infinity}
                     />
                     <br />
-                    A
-                    <TypeAnimation
-                        sequence={[" Front-End", 1200, "", 500]}
-                        wrapper="span"
-                        speed={50}
-                        className="text-purple-400 font-bold"
-                        repeat={Infinity}
-                    />
-                    Web Developer
+                    A Front-End Web Developer
                 </h1>
                 <p className="mt-4 text-lg text-gray-300">
                     Elevating Web Experiences with Innovation & Aesthetics
