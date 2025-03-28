@@ -29,8 +29,7 @@ const projects: ProjectItem[] = [
     },
     {
         title: "Apartment Management System",
-        description:
-            "During my internship, I built an apartment management website using React. It was my first real-world project, where I applied my knowledge and learned new concepts. I worked hard to make this website both functional and visually appealing.",
+        description:"During my internship, I built an apartment management website using React. It was my first real-world project, where I applied my knowledge and learned new concepts. I worked hard to make this website both functional and visually appealing.",
         imageUrl: "apartment.jpg",
         altText: "Apartment Management System",
     },
