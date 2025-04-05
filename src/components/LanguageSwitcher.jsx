@@ -23,7 +23,7 @@ const LanguageSwitcher = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-4 left-4 z-50 bg-white border rounded-lg shadow-lg p-2">
+    <div className="fixed bottom-4 left-4 z-50 bg-white border rounded-xl p-2">
       <div id="google_translate_element"></div>
     </div>
   );

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { BsGithub } from "react-icons/bs";
-import { FaTwitter, FaInstagram, FaFacebookF, FaLinkedin } from "react-icons/fa";
+import { FaTwitter, FaInstagram, FaFacebookF, FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 
@@ -59,19 +59,16 @@ const Contact = () => {
         </p>
         <div className="mt-5" data-aos="fade-up">
           <p className="flex items-center gap-2" data-aos="fade-right">
-            <span className="text-blue-500 text-xl"><MdEmail /></span>
+            <span className="text-blue-500 text-2xl"><MdEmail /></span>
             <a href="mailto:Youloos477@gmail.com">Youloos477@gmail.com</a>
-          </p>
-          <p className="flex items-center gap-2" data-aos="fade-right">
-            <span className="text-blue-500 text-xl"><BsGithub /></span>
-            <a href="https://github.com/youlook335">youlook335</a>
           </p>
         </div>
         <div className="flex gap-4 mt-4" data-aos="fade-up">
-          <a href="#" className="text-blue-400 text-2xl hover:text-white transition duration-300"><FaTwitter /></a>
-          <a href="#" className="text-pink-400 text-2xl hover:text-white transition duration-300"><FaInstagram /></a>
-          <a href="#" className="text-blue-500 text-2xl hover:text-white transition duration-300"><FaFacebookF /></a>
-          <a href="#" className="text-cyan-400 text-2xl hover:text-white transition duration-300"><FaLinkedin /></a>
+          <a target="_blank" href="https://github.com/youlook335" className="text-black text-3xl hover:text-white transition duration-300"><FaGithub /></a>
+          <a target="_blank" href="@youloos477" className="text-blue-400 text-3xl hover:text-white transition duration-300"><FaTwitter /></a>
+          <a target="_blank" href="youloos477" className="text-pink-400 text-3xl hover:text-white transition duration-300"><FaInstagram /></a>
+          <a target="_blank" href="profile.php?id=61569362753063" className="text-blue-500 text-3xl hover:text-white transition duration-300"><FaFacebookF /></a>
+          <a target="_blank" href="in/malik-tanveer-342388349" className="text-cyan-400 text-3xl hover:text-white transition duration-300"><FaLinkedin /></a>
         </div>
       </div>
 
@@ -80,7 +77,7 @@ const Contact = () => {
         <input type="text" name="name" value={formData.name} placeholder="Your Name" onChange={handleChange} className="w-full p-3 mb-4 bg-gray-700 text-white rounded border border-gray-600 focus:border-blue-500 focus:outline-none" data-aos="fade-up" />
         <input type="email" name="email" value={formData.email} placeholder="Your Email" onChange={handleChange} className="w-full p-3 mb-4 bg-gray-700 text-white rounded border border-gray-600 focus:border-blue-500 focus:outline-none" data-aos="fade-up" />
         <input type="text" name="subject" value={formData.subject} placeholder="Your Subject" onChange={handleChange} className="w-full p-3 mb-4 bg-gray-700 text-white rounded border border-gray-600 focus:border-blue-500 focus:outline-none" data-aos="fade-up" />
-        <textarea name="message" value={formData.message} placeholder="Your Message" style={{resize: 'none'}} onChange={handleChange} className="w-full p-3 mb-4 bg-gray-700 text-white rounded border border-gray-600 focus:border-blue-500 focus:outline-none h-32" data-aos="fade-up"></textarea>
+        <textarea name="message" value={formData.message} placeholder="Your Message" style={{ resize: 'none' }} onChange={handleChange} className="w-full p-3 mb-4 bg-gray-700 text-white rounded border border-gray-600 focus:border-blue-500 focus:outline-none h-32" data-aos="fade-up"></textarea>
         <button type="submit" className="w-full p-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300 shadow-md" data-aos="zoom-in">Submit</button>
       </form>
     </div>
