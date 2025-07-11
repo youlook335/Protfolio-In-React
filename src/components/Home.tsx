@@ -1,3 +1,5 @@
+'use clinet'
+import img from "../assets/WhatsApp Image 2025-01-01 at 21.14.04_da6a6a10.jpg";
 import { useEffect } from "react";
 import { TypeAnimation } from "react-type-animation";
 import AOS from "aos";
@@ -10,8 +12,8 @@ function Home() {
 
     const handleDownload = () => {
         const link = document.createElement("a");
-        link.href = "/tanveer.pdf"; // Ensure your file is in the public folder
-        link.download = "tanveer.pdf"; // File name for download
+        link.href = "/Tanveer (1).pdf"; // Ensure your file is in the public folder
+        link.download = "resume.pdf"; // File name for download
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -34,7 +36,7 @@ function Home() {
                         repeat={Infinity}
                     />
                     <br />
-                    A Front-End Web Developer
+                    A MERN Stack Web Developer
                 </h1>
                 <p className="mt-4 text-lg text-gray-300">
                     Elevating Web Experiences with Innovation & Aesthetics
@@ -60,9 +62,9 @@ function Home() {
 
             {/* Right Side - Profile Image */}
             <div className="md:w-1/2 flex justify-center mt-10 md:mt-0 relative z-10" data-aos="fade-left">
-                <div className="mb-5 relative w-80 h-80 rounded-full overflow-hidden shadow-2xl shadow-cyan-500 border-4 border-transparent hover:border-pink-500 transition-all duration-300">
+                <div className="mb-5 relative w-90 h-80 rounded-full overflow-hidden shadow-2xl shadow-cyan-500 border-4 border-transparent hover:border-pink-500 transition-all duration-300">
                     <img
-                        src="https://avatars.githubusercontent.com/u/197722550?v=4"
+                        src={img}
                         alt="Profile"
                         className="w-full h-full "
                     />
@@ -70,7 +72,6 @@ function Home() {
                     <div className="absolute inset-0 w-full h-full border-4 border-transparent rounded-full animate-pulse"></div>
                 </div>
             </div>
-
         </div>
     );
 }

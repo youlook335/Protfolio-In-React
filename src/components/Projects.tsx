@@ -7,33 +7,63 @@ interface ProjectItem {
     description: string;
     imageUrl: string;
     altText: string;
-    reverse?: boolean;
+    click: string;
 }
-
 const projects: ProjectItem[] = [
     {
         title: "AI Web Application",
         description:
             "Bootpress is a Web app built using React.js, Tailwind CSS, and Bootstrap, with Firebase Authentication for secure Google sign-in. It combines modern AI technologies with access control. Soon, it will integrate an AI system allowing users to interact with AI-generated content directly within the app.",
         imageUrl: "AI.jpg",
-        altText: "Chat Application",
+        altText: "AI Web Application",
+        click: ""
     },
     {
         title: "E-Commerce Platform - SkyMart",
         description:
-            "One of the projects I worked on during my internship was SkyMart—an e-commerce website built with React, Tailwind CSS, and Bootstrap. It enables users to browse products, add them to their cart, and save their favorites. It was an exciting experience developing the frontend.",
-        imageUrl:
-            "https://dev-muhammad.vercel.app/static/media/skymart.c52e55a85ec48b8d2704.JPG",
+            "One of the projects I worked on during my internship was SkyMart—an e-commerce website built with React, Tailwind CSS, and Bootstrap. It enables users to browse products, add them to their cart, and save their favorites.",
+        imageUrl: "skymart.png",
         altText: "E-Commerce Platform",
-        reverse: true,
+        click: ""
     },
     {
         title: "Apartment Management System",
-        description:"During my internship, I built an apartment management website using React. It was my first real-world project, where I applied my knowledge and learned new concepts. I worked hard to make this website both functional and visually appealing.",
+        description:
+            "During my internship, I built an apartment management website using React. It was my first real-world project, where I applied my knowledge and learned new concepts. I worked hard to make this website both functional and visually appealing.",
         imageUrl: "apartment.jpg",
         altText: "Apartment Management System",
+        click: ""
+
     },
+    {
+        title: "Data Converter Table",
+        description:
+            "A React app where users can fill out a form and see the submitted data appear in a live-updating table. Helpful for learning state management and form handling.",
+        imageUrl: "D_Convertpng.png",
+        altText: "Form to Table App",
+        click: ""
+
+    },
+    {
+        title: "GNews Blog App",
+        description:
+            "A modern blog interface built using React and Axios. It fetches the latest headlines using the GNews API. Optimized for responsiveness and clean UI design.",
+        imageUrl: "GNews.png",
+        altText: "GNews Blog",
+        click: ""
+    },
+
+    {
+        title: "Mini LMS (Learning Platform)",
+        description:
+            "This mini LMS displays YouTube course listings. On click, users are taken to the course page. Built with React, ideal for learners to organize their resources.",
+        imageUrl: "LMS.png",
+        altText: "Mini LMS",
+        click: ""
+    },
+
 ];
+
 
 const Projects: React.FC = () => {
     useEffect(() => {
@@ -41,40 +71,33 @@ const Projects: React.FC = () => {
     }, []);
 
     return (
-        <div className="project-container flex flex-col items-center justify-center p-20 bg-[#0a0f1a] relative">
+        <div className="bg-[#0a0f1a] py-20 px-6 text-white">
             <h1
                 data-aos="fade-up"
-                className="mb-10 mt-10 p-2 text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500"
+                className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 text-center mb-12"
             >
                 My Projects
             </h1>
 
-            {projects.map((project, index) => (
-                <div
-                    key={index}
-                    data-aos="zoom-in"
-                    className={`flex flex-col md:flex-row items-center mt-20 text-center md:text-left gap-20 ${
-                        project.reverse ? "md:flex-row-reverse" : ""
-                    }`}
-                >
-                    <img
-                        src={project.imageUrl}
-                        alt={project.altText}
-                        data-aos="fade-right"
-                        className="rounded-lg shadow-lg w-full md:w-1/2"
-                    />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+                {projects.map((project, index) => (
                     <div
-                        className="md:w-1/2"
-                        data-aos="fade-up"
-                        data-aos-anchor-placement="top-center"
+                        key={index}
+                        data-aos="zoom-in"
+                        className="bg-[#111827] rounded-xl p-4 shadow-lg hover:scale-105 transition-transform duration-300"
                     >
-                        <h2 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 leading-tight">
+                        <img
+                            src={project.imageUrl}
+                            alt={project.altText}
+                            className="rounded-md w-full h-40 object-cover mb-4"
+                        />
+                        <h3 className="text-xl font-semibold text-cyan-400 mb-2">
                             {project.title}
-                        </h2>
-                        <p className="mt-2 text-gray-400">{project.description}</p>
+                        </h3>
+                        <p className="text-gray-400 text-sm">{project.description}</p>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
         </div>
     );
 };

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { BsGithub } from "react-icons/bs";
 import { FaTwitter, FaInstagram, FaFacebookF, FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import emailjs from "@emailjs/browser";
@@ -27,59 +26,94 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_yvmnabr", // YOUR_SERVICE_ID
-        "template_59c1u8i", // YOUR_TEMPLATE_ID
+        "service_yvmnabr",
+        "template_59c1u8i",
         formData,
-        "KGCAozw0toGIzG0tq"   //YOUR_PUBLIC_KEY
+        "KGCAozw0toGIzG0tq"
       )
       .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
+        () => {
           alert("Message sent successfully!");
           setFormData({ name: "", email: "", subject: "", message: "" });
         },
-        (error) => {
-          console.log("FAILED...", error);
+        () => {
           alert("Failed to send message. Please try again.");
         }
       );
   };
 
   return (
-    <div className="bg-[#0a0f1a] text-white py-20 px-5 md:px-20 flex flex-col md:flex-row justify-between items-center min-h-screen">
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-900 to-purple-900 opacity-20 blur-3xl"></div>
+    <div className="bg-[#0a0f1a] text-white py-20 px-6 md:px-20 flex flex-col md:flex-row-reverse items-center gap-12 min-h-screen relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-900 to-purple-900 opacity-20 blur-3xl z-0"></div>
 
-      {/* Left Section */}
-      <div className="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
-        <h2 className="text-3xl font-bold text-white" data-aos="fade-down">
-          Contact <span className="text-blue-500">Me</span>
+      {/* Form Section */}
+      <form
+        onSubmit={handleSubmit}
+        className="md:w-1/2 z-10 bg-[#121826] p-8 rounded-xl shadow-lg w-full max-w-xl space-y-5"
+        data-aos="fade-up"
+      >
+        <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 text-center">Send a Message</h2>
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={formData.name}
+          onChange={handleChange}
+          className="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          value={formData.email}
+          onChange={handleChange}
+          className="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+        />
+        <input
+          type="text"
+          name="subject"
+          placeholder="Subject"
+          value={formData.subject}
+          onChange={handleChange}
+          className="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+        />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          value={formData.message}
+          onChange={handleChange}
+          className="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all h-32 resize-none"
+        />
+        <button
+          type="submit"
+          className="w-full bg-blue-600 hover:bg-blue-700 transition-all py-3 rounded-lg text-lg font-semibold shadow-md"
+        >
+          Send Message
+        </button>
+      </form>
+
+      {/* Info Section */}
+      <div className="md:w-1/2 text-center md:text-left z-10" data-aos="fade-right">
+        <h2 className="text-4xl font-extrabold text-white mb-4">
+          Let's <span className="text-blue-500">Connect</span>
         </h2>
-        <p className="mt-3 text-gray-300 w-3/4" data-aos="fade-up">
-          Let's Work Together. Feel free to reach out if you have any questions, opportunities, or just want to connect.
+        <p className="text-gray-300 mb-6 max-w-md mx-auto md:mx-0">
+          Have a question or want to collaborate? Drop a message — I’ll get back as soon as possible!
         </p>
-        <div className="mt-5" data-aos="fade-up">
-          <p className="flex items-center gap-2" data-aos="fade-right">
-            <span className="text-blue-500 text-2xl"><MdEmail /></span>
-            <a href="mailto:Youloos477@gmail.com">Youloos477@gmail.com</a>
-          </p>
-        </div>
-        <div className="flex gap-4 mt-4" data-aos="fade-up">
-          <a target="_blank" href="https://github.com/youlook335" className="text-black text-3xl hover:text-white transition duration-300"><FaGithub /></a>
-          <a target="_blank" href="@youloos477" className="text-blue-400 text-3xl hover:text-white transition duration-300"><FaTwitter /></a>
-          <a target="_blank" href="youloos477" className="text-pink-400 text-3xl hover:text-white transition duration-300"><FaInstagram /></a>
-          <a target="_blank" href="profile.php?id=61569362753063" className="text-blue-500 text-3xl hover:text-white transition duration-300"><FaFacebookF /></a>
-          <a target="_blank" href="in/malik-tanveer-342388349" className="text-cyan-400 text-3xl hover:text-white transition duration-300"><FaLinkedin /></a>
+
+        <p className="flex justify-center md:justify-start items-center gap-2 text-white mb-4">
+          <MdEmail className="text-2xl text-blue-400" />
+          <a href="mailto:Youloos477@gmail.com" className="hover:underline">Youloos477@gmail.com</a>
+        </p>
+
+        <div className="flex justify-center md:justify-start gap-4 text-2xl">
+          <a href="https://github.com/youlook335" target="_blank" className="text-gray-300 hover:text-white"><FaGithub /></a>
+          <a href="https://twitter.com/youloos477" target="_blank" className="text-blue-400 hover:text-white"><FaTwitter /></a>
+          <a href="https://instagram.com/youloos477" target="_blank" className="text-pink-400 hover:text-white"><FaInstagram /></a>
+          <a href="https://facebook.com/profile.php?id=61569362753063" target="_blank" className="text-blue-600 hover:text-white"><FaFacebookF /></a>
+          <a href="https://linkedin.com/in/malik-tanveer-342388349" target="_blank" className="text-cyan-400 hover:text-white"><FaLinkedin /></a>
         </div>
       </div>
-
-      {/* Right Section - Form */}
-      <form onSubmit={handleSubmit} className="md:w-1/2 bg-gray-800 p-8 rounded-lg shadow-xl w-full max-w-lg">
-        <input type="text" name="name" value={formData.name} placeholder="Your Name" onChange={handleChange} className="w-full p-3 mb-4 bg-gray-700 text-white rounded border border-gray-600 focus:border-blue-500 focus:outline-none" data-aos="fade-up" />
-        <input type="email" name="email" value={formData.email} placeholder="Your Email" onChange={handleChange} className="w-full p-3 mb-4 bg-gray-700 text-white rounded border border-gray-600 focus:border-blue-500 focus:outline-none" data-aos="fade-up" />
-        <input type="text" name="subject" value={formData.subject} placeholder="Your Subject" onChange={handleChange} className="w-full p-3 mb-4 bg-gray-700 text-white rounded border border-gray-600 focus:border-blue-500 focus:outline-none" data-aos="fade-up" />
-        <textarea name="message" value={formData.message} placeholder="Your Message" style={{ resize: 'none' }} onChange={handleChange} className="w-full p-3 mb-4 bg-gray-700 text-white rounded border border-gray-600 focus:border-blue-500 focus:outline-none h-32" data-aos="fade-up"></textarea>
-        <button type="submit" className="w-full p-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300 shadow-md" data-aos="zoom-in">Submit</button>
-      </form>
     </div>
   );
 };

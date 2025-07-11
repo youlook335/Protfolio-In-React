@@ -7,6 +7,6 @@ import LanguageSwitcher from "../src/components/LanguageSwitcher"
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
-    <LanguageSwitcher/>
+    {/* <LanguageSwitcher/> */}
   </StrictMode>,
 )
