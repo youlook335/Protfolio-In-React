@@ -1,5 +1,3 @@
-'use clinet'
-import img from "../assets/WhatsApp Image 2025-01-01 at 21.14.04_da6a6a10.jpg";
 import { useEffect } from "react";
 import { TypeAnimation } from "react-type-animation";
 import AOS from "aos";
@@ -12,8 +10,8 @@ function Home() {
 
     const handleDownload = () => {
         const link = document.createElement("a");
-        link.href = "/Tanveer (1).pdf"; // Ensure your file is in the public folder
-        link.download = "resume.pdf"; // File name for download
+        link.href = "/Tanveer (1).pdf";
+        link.download = "resume.pdf";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -64,7 +62,7 @@ function Home() {
             <div className="md:w-1/2 flex justify-center mt-10 md:mt-0 relative z-10" data-aos="fade-left">
                 <div className="mb-5 relative w-90 h-80 rounded-full overflow-hidden shadow-2xl shadow-cyan-500 border-4 border-transparent hover:border-pink-500 transition-all duration-300">
                     <img
-                        src={img}
+                        src="WhatsApp Image 2025-01-01 at 21.14.04_da6a6a10.jpg"
                         alt="Profile"
                         className="w-full h-full "
                     />

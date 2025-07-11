@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import { FaTwitter, FaInstagram, FaFacebookF, FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import emailjs from "@emailjs/browser";
+import { BiPhone } from "react-icons/bi";
 
 const Contact = () => {
   useEffect(() => {
@@ -104,6 +105,11 @@ const Contact = () => {
         <p className="flex justify-center md:justify-start items-center gap-2 text-white mb-4">
           <MdEmail className="text-2xl text-blue-400" />
           <a href="mailto:Youloos477@gmail.com" className="hover:underline">Youloos477@gmail.com</a>
+        </p>
+        <p className="flex justify-center md:justify-start items-center gap-2 text-white mb-4">
+          <BiPhone className="text-2xl text-blue-400" />
+          {/* <phon className="text-2xl text-blue-400" /> */}
+          <a href="phone:+92 357048768" className="hover:underline">+92 357048 768</a>
         </p>
 
         <div className="flex justify-center md:justify-start gap-4 text-2xl">
