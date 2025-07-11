@@ -16,7 +16,7 @@ const projects: ProjectItem[] = [
             "Bootpress is a Web app built using React.js, Tailwind CSS, and Bootstrap, with Firebase Authentication for secure Google sign-in. It combines modern AI technologies with access control. Soon, it will integrate an AI system allowing users to interact with AI-generated content directly within the app.",
         imageUrl: "AI.jpg",
         altText: "AI Web Application",
-        click: ""
+        click: "https://bootpress-ai.vercel.app/"
     },
     {
         title: "E-Commerce Platform - SkyMart",
@@ -24,7 +24,7 @@ const projects: ProjectItem[] = [
             "One of the projects I worked on during my internship was SkyMart—an e-commerce website built with React, Tailwind CSS, and Bootstrap. It enables users to browse products, add them to their cart, and save their favorites.",
         imageUrl: "skymart.png",
         altText: "E-Commerce Platform",
-        click: ""
+        click: "https://skytechmart.netlify.app/"
     },
     {
         title: "Apartment Management System",
@@ -32,7 +32,7 @@ const projects: ProjectItem[] = [
             "During my internship, I built an apartment management website using React. It was my first real-world project, where I applied my knowledge and learned new concepts. I worked hard to make this website both functional and visually appealing.",
         imageUrl: "apartment.jpg",
         altText: "Apartment Management System",
-        click: ""
+        click: "https://website-apartment-project.netlify.app/"
 
     },
     {
@@ -41,7 +41,7 @@ const projects: ProjectItem[] = [
             "A React app where users can fill out a form and see the submitted data appear in a live-updating table. Helpful for learning state management and form handling.",
         imageUrl: "D_Convertpng.png",
         altText: "Form to Table App",
-        click: ""
+        click: "https://firestore-crud-ts.web.app/"
 
     },
     {
@@ -50,7 +50,7 @@ const projects: ProjectItem[] = [
             "A modern blog interface built using React and Axios. It fetches the latest headlines using the GNews API. Optimized for responsiveness and clean UI design.",
         imageUrl: "GNews.png",
         altText: "GNews Blog",
-        click: ""
+        click: "https://blog-app-100-project.vercel.app/"
     },
 
     {
@@ -59,7 +59,7 @@ const projects: ProjectItem[] = [
             "This mini LMS displays YouTube course listings. On click, users are taken to the course page. Built with React, ideal for learners to organize their resources.",
         imageUrl: "LMS.png",
         altText: "Mini LMS",
-        click: ""
+        click: "https://protfolio-personal.vercel.app/"
     },
 
 ];
@@ -86,11 +86,14 @@ const Projects: React.FC = () => {
                         data-aos="zoom-in"
                         className="bg-[#111827] rounded-xl p-4 shadow-lg hover:scale-105 transition-transform duration-300"
                     >
-                        <img
-                            src={project.imageUrl}
-                            alt={project.altText}
-                            className="rounded-md w-full h-40 object-cover mb-4"
-                        />
+                        <a href={project.click} target="_blank" rel="noopener noreferrer">
+
+                            <img
+                                src={project.imageUrl}
+                                alt={project.altText}
+                                className="rounded-md w-full h-40 object-cover mb-4"
+                            />
+                        </a>
                         <h3 className="text-xl font-semibold text-cyan-400 mb-2">
                             {project.title}
                         </h3>

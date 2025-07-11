@@ -2,6 +2,7 @@ import { TypeAnimation } from "react-type-animation";
 import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { FaHtml5 } from "react-icons/fa";
 
 interface Skill {
     name: string;
@@ -9,20 +10,20 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-    { name: "HTML", image: "https://cdn.worldvectorlogo.com/logos/html-1.svg" },
-    { name: "CSS", image: "https://cdn.worldvectorlogo.com/logos/css-3.svg" },
-    { name: "JavaScript", image: "https://cdn.worldvectorlogo.com/logos/javascript-1.svg" },
-    { name: "Git", image: "https://cdn.worldvectorlogo.com/logos/git-icon.svg" },
-    { name: "React.js", image: "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
-    { name: "Bootstrap", image: "https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg" },
-    { name: "TypeScript", image: "https://cdn.worldvectorlogo.com/logos/typescript.svg" },
-    { name: "Tailwind CSS", image: "https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" },
-    { name: "PHP", image: "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" },
-    { name: "Node.js", image: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" },
-    { name: "Express.js", image: "public/expresspng.png" },
-    { name: "MongoDB", image: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" },
-    { name: "Postman", image: "https://cdn.worldvectorlogo.com/logos/postman.svg" },
-    { name: "JWT Auth", image: "https://jwt.io/img/pic_logo.svg" },
+    { name: "HTML", image: "html-1.svg" },
+    { name: "CSS", image: "css-3.svg" },
+    { name: "JavaScript", image: "javascript-1.svg" },
+    { name: "Git", image: "git-icon.svg" },
+    { name: "React.js", image: "react-2.svg" },
+    { name: "Bootstrap", image: "bootstrap-5-1.svg" },
+    { name: "TypeScript", image: "typescript.svg" },
+    { name: "Tailwind CSS", image: "tailwindcss.svg" },
+    { name: "PHP", image: "PHP-logo.svg" },
+    { name: "Node.js", image: "nodejs-icon.svg" },
+    { name: "Express.js", image: "expresspng.png" },
+    { name: "MongoDB", image: "mongodb-icon-1.svg" },
+    { name: "Postman", image: "postman.svg" },
+    { name: "JWT Auth", image: "pic_logo.svg" },
 ];
 // imports remain same
 
@@ -39,6 +40,7 @@ const About: React.FC = () => {
             className="about-container min-h-screen flex flex-col md:flex-row items-center justify-center px-8 bg-[#0a0f1a] relative"
             data-aos="fade-up"
         >
+
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-900 to-purple-900 opacity-20 blur-3xl"></div>
 
             {/* Left Side - Text Content */}
