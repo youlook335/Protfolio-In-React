@@ -112,13 +112,7 @@ const Contact = () => {
           <a href="phone:+92 357048768" className="hover:underline">+92 357048 768</a>
         </p>
 
-        <div className="flex justify-center md:justify-start gap-4 text-2xl">
-          <a href="https://github.com/youlook335" target="_blank" className="text-gray-300 hover:text-white"><FaGithub /></a>
-          <a href="https://twitter.com/youloos477" target="_blank" className="text-blue-400 hover:text-white"><FaTwitter /></a>
-          <a href="https://instagram.com/youloos477" target="_blank" className="text-pink-400 hover:text-white"><FaInstagram /></a>
-          <a href="https://facebook.com/profile.php?id=61569362753063" target="_blank" className="text-blue-600 hover:text-white"><FaFacebookF /></a>
-          <a href="https://linkedin.com/in/malik-tanveer-342388349" target="_blank" className="text-cyan-400 hover:text-white"><FaLinkedin /></a>
-        </div>
+        
       </div>
     </div>
   );

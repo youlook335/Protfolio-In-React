@@ -7,11 +7,11 @@ const frontendSkills = [
     { name: "HTML", percent: 80, icon: "html-1.svg" },
     { name: "CSS", percent: 70, icon: "css-3.svg" },
     { name: "JavaScript", percent: 70, icon: "javascript-1.svg" },
-    { name: "Git", percent: 80, icon: "git-icon.svg" },
+    { name: "Git", percent: 60, icon: "git-icon.svg" },
     { name: "React.js", percent: 70, icon: "react-2.svg" },
-    { name: "Bootstrap", percent: 70, icon: "bootstrap-5-1.svg" },
-    { name: "TypeScript", percent: 60, icon: "typescript.svg" },
-    { name: "Tailwind CSS", percent: 70, icon: "tailwindcss.svg" },
+    { name: "Bootstrap", percent: 50, icon: "bootstrap-5-1.svg" },
+    { name: "TypeScript", percent: 70, icon: "typescript.svg" },
+    { name: "Tailwind CSS", percent: 50, icon: "tailwindcss.svg" },
     { name: "PHP", percent: 30, icon: "PHP-logo.svg" },
 ];
 
@@ -19,8 +19,8 @@ const backendSkills = [
     { name: "Node.js", percent: 65, icon: "nodejs-icon.svg" },
     { name: "Express.js", percent: 60, icon: "expresspng.png" },
     { name: "MongoDB", percent: 70, icon: "mongodb-icon-1.svg" },
-    { name: "Postman", percent: 70, icon: "postman.svg" },
-    { name: "JWT Auth", percent: 60, icon: "pic_logo.svg" },
+    { name: "Postman", percent: 40, icon: "postman.svg" },
+    { name: "JWT Auth", percent: 40, icon: "pic_logo.svg" },
 ];
 
 const softSkills = [
